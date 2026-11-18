@@ -1,0 +1,35 @@
+**Short Notes on Arrays, Linked Lists, and When to Use What **
+
+**Array:**
+
+A sequential collection of data, referenced by indices starting from 0.
+
+- **Access:** Elements can be accessed directly using their index in \(O(1)\) time.
+- **Insertion:** Adding an element in the middle may require shifting subsequent elements.
+- **Deletion:** Removing an element may require shifting elements to fill the gap.
+- **Time Complexity:** Insertion and deletion can take \(O(n)\) time due to shifting. It takes almost the same time to search up any index in the array.
+- **Limitation:** Traditional arrays have a fixed size, making resizing difficult. The computer has to shift the entire data array accordingly. That is a big issue.
+
+
+**Linked List**
+
+Arrays strictly follow a fixed order. It becomes incredibly difficult to add data between indexes. Thus, linked lists were created
+
+- **What are they?:** Linked lists are random reference points present anywhere in memory, stored in nodes.
+- **Efficiency:** Incredibly easy to add or remove data from the linked list, as simple rerouting can streamline the process. For example: To insert "a" between indexes 1 and 2, you simply modify the list to go from 1 to "a" and then from "a" to 2, instead of changing entire data points.
+- **Issues:** It is incredibly fast to search data in an array; however, it is incredibly slow to do so in a linked list, as you would have to go from 0 to 1 to... n all the time.
+
+Types of Linked Lists
+
+1. Singly Linked List
+Each node contains data and a reference to the next node. Traversal is possible only in the forward direction. The last node points to None (or NULL)
+
+2. Doubly Linked List
+Each node contains data and two references: one to the previous node and another to the next node. Traversal is possible in both directions.
+
+3. Circular Linked List
+The last node points back to the first node instead of None, forming a loop. Can be singly or doubly linked. Useful for repeatedly cycling through elements but requires additional memory for the previous reference.
+
+**When to use Arrays and When to use Linked Lists?**
+Use arrays if the task requires frequent searching of data quickly. Use Linked Lists if the task requires frequent modification, insertion, and removal of data.
+
